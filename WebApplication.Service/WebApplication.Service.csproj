@@ -8,4 +8,9 @@
     <ProjectReference Include="..\WebApplication.Core\WebApplication.Core.csproj" />
   </ItemGroup>
 
+  <ItemGroup>
+    <Folder Include="Utils\" />
+    <Folder Include="Service\" />
+  </ItemGroup>
+
 </Project>
