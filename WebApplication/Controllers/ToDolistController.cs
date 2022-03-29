@@ -3,15 +3,9 @@ using WebApplication.Service.Service;
 
 namespace WebApplication.Mvc.Controllers
 {
-    public class ToDolistController : Controller
+    public class ToDoListController : Controller
     {
-        private readonly ToDoListService toDoListService;
-
-        public ToDolistController()
-        {
-            toDoListService = new ToDoListService();
-        }
-
+        private ToDoListService toDoListService;
         public IActionResult Index()
         {
             return View();
