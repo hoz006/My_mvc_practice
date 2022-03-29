@@ -10,7 +10,7 @@ namespace WebApplication.Core.Repository
 {
     public class ToDoListRepository
     {
-        private readonly List<ToDoListEntity> ToDoListEntities = new List<ToDoListEntity>()
+        private static readonly List<ToDoListEntity> ToDoListEntities = new List<ToDoListEntity>()
         { 
             new ToDoListEntity{Id = "1",Title = "标题1",Content = "内容1",Type = ToDoListType.LevelA,CreatedDate = DateTime.Now,CreatorName = "Peter",IsDone = true },
             new ToDoListEntity{Id = "2",Title = "标题2",Content = "内容2",Type = ToDoListType.LevelB,CreatedDate = DateTime.Now,CreatorName = "John",IsDone = false },
