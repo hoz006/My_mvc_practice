@@ -5,7 +5,7 @@ namespace WebApplication.Mvc.Controllers
 {
     public class ToDolistController : Controller
     {
-        private ToDoListService toDoListService;
+        private readonly ToDoListService toDoListService;
 
         public ToDolistController()
         {
