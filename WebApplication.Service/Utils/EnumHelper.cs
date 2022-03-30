@@ -14,7 +14,6 @@ namespace WebApplication.Service.Utils
         /// <summary>
         ///  根据Description获取枚举
         /// </summary>
-        /// <param name="fieldInfo">FieldInfo</param>
         /// <returns>DescriptionAttribute[] </returns>
         public static T GetEnumName<T>(string description)
         {
@@ -33,8 +32,7 @@ namespace WebApplication.Service.Utils
                         return (T)field.GetValue(null);
                 }
             }
-            return default(T);
-            //throw new ArgumentException(string.Format("{0} 未能找到对应的枚举.", description), "Description");
+            return default;
         }
 
         private static DescriptionAttribute[] GetDescriptAttr(this FieldInfo fieldInfo)
