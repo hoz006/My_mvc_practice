@@ -1,4 +1,5 @@
 ﻿@using WebApplication.Core.Entities
+@using WebApplication.Service.Utils
 
 @model List<ToDoListEntity>
 @{
@@ -10,7 +11,7 @@
         <li>
             <div>标题：@item.Title</div>
             <div>内容：@item.Content</div>
-            <div>类型：@item.Type</div>
+            <div>类型：@EnumHelper.GetEnumDescription(item.Type)</div>
             <div>是否完成：@(item.IsDone ? "是" : "否")</div>
             <div>创建时间：@(item.CreatedDate.ToString("yyyy年M月dd日 h时mm分ss秒"))</div>
             <div>创建人：@item.CreatorName</div>
